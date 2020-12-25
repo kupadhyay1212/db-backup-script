@@ -1,12 +1,12 @@
 #!/bin/bash
 #this will backup the db in zip file and delete the file after 30days
 
-/usr/bin/mysqldump -u root -p'~!Yamaha@123#' yamaha_live | gzip >/db-backup/yamaha_live-`date +%Y-%m-%d_%H-%M-%S`.sql.gz
+/usr/bin/mysqldump -u root -p'test' yamaha_test | gzip >/db-backup/yamaha_test-`date +%Y-%m-%d_%H-%M-%S`.sql.gz
 
 find /db-backup -type f -mtime +30 –delete
 
 #for unzip this file used this cmd
-#gunzip yamaha.live-`date +%Y-%m-%d_%H-%M-%S`.sql.gz
+#gunzip yamaha.test-`date +%Y-%m-%d_%H-%M-%S`.sql.gz
 
 
 
